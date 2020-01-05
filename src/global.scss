@@ -24,3 +24,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-title img {
+	max-height: 39px;
+	margin-top: 6px;
+}
+
+ion-item {
+	--background-active: #fff;
+}
+
+ion-textarea {
+	height: 100px;
+}
+
+textarea {
+	height: 80px;
+}

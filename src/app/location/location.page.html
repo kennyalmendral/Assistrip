@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Assistrip</ion-title>
+
+		<ion-buttons slot="end">
+			<ion-button (click)="setLocation()">
+				<ion-icon slot="icon-only" name="pin"></ion-icon>
+			</ion-button>
+			<ion-button (click)="takeMeHome()">
+				<ion-icon slot="icon-only" name="home"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<google-map apiKey="AIzaSyATiTT8_WWUURAV5zUEPuMkD1cp7Ua3XQI"></google-map>
+</ion-content>

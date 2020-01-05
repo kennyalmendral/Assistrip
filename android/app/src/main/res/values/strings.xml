@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Assistrip</string>
+    <string name="title_activity_main">Assistrip</string>
+    <string name="package_name">io.github.kennyalmendral.assistrip</string>
+    <string name="custom_url_scheme">io.github.kennyalmendral.assistrip</string>
+</resources>

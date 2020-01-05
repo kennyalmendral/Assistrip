@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>My Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+	<ion-card>
+		<ion-card-content>Update this form with your details so you have an easy reference for later use.</ion-card-content>
+	</ion-card>
+
+	<ion-list lines="none">
+		<form [formGroup]="myDetailsForm">
+			<ion-item>
+				<ion-label position="stacked"><strong>Name</strong></ion-label>
+				<ion-input type="text" formControlName="name"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="stacked"><strong>Email Address</strong></ion-label>
+				<ion-input type="email" formControlName="email"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="stacked"><strong>Contact Number</strong></ion-label>
+				<ion-input type="text" formControlName="contactNumber"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="stacked"><strong>Address</strong></ion-label>
+				<ion-input type="text" formControlName="address"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="stacked"><strong>Notes</strong></ion-label>
+				<ion-textarea type="text" formControlName="notes"></ion-textarea>
+			</ion-item>
+
+			<ion-button color="primary" expand="block" (click)="saveForm()" style="margin-top: 12px;">Save Changes</ion-button>
+		</form>
+	</ion-list>
+</ion-content>
