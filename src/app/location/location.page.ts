@@ -38,6 +38,8 @@ export class LocationPage implements OnInit {
 						this.longitude = location.longitude;
 
 						this.map.changeMarker(this.latitude, this.longitude);
+					} else {
+							this.presentAlert('Location is not set', "Looks like you haven't set the location of the hotel where you're currently staying yet. Tap the <ion-icon slot=\"icon-only\" name=\"pin\"></ion-icon> icon located at the top right corner of your screen to do so.");
 					}
 				},
 				err => {
@@ -69,17 +71,7 @@ export class LocationPage implements OnInit {
 
 					this.dataService.setLocation(data);
 
-					this.alertCtrl.create({
-						header: 'Location has been set',
-						message: "You can now find your way back to the hotel where you're currently staying from anywhere by clicking the house icon located at the top right corner of your screen.",
-						buttons: [
-							{
-								text: 'Ok'
-							}
-						]
-					}).then(alert => {
-						alert.present();
-					});
+					this.presentAlert('Location has been set', "You can now find your way back to the hotel where you're currently staying from anywhere by tapping the <ion-icon slot=\"icon-only\" name=\"home\"></ion-icon> icon located at the top right corner of your screen.");
 				},
 				err => {
 					console.log(err);
@@ -92,17 +84,7 @@ export class LocationPage implements OnInit {
 
 	takeMeHome(): void {
 		if (!this.latitude || !this.longitude) {
-			this.alertCtrl.create({
-				header: 'Nowhere to go',
-				message: "You need to set the location of the hotel where you're currently staying first.",
-				buttons: [
-					{
-						text: 'Ok'
-					}
-				]
-			}).then(alert => {
-				alert.present();
-			});
+			this.presentAlert('Nowhere to go', "You need to set the location of the hotel where you're currently staying first. Tap the <ion-icon slot=\"icon-only\" name=\"pin\"></ion-icon> icon located at the top right corner of your screen to do so.");
 		} else {
 			let destination = this.latitude + ',' + this.longitude;
 
@@ -114,5 +96,19 @@ export class LocationPage implements OnInit {
 				window.open('geo:0,0?q=' + destination + '(' + label + ')', '_system');
 			}
 		}
+	}
+
+	presentAlert(alertHeader, alertMessage): void {
+		this.alertCtrl.create({
+			header: alertHeader,
+			message: alertMessage,
+			buttons: [
+				{
+					text: 'Ok'
+				}
+			]
+		}).then(alert => {
+			alert.present();
+		});
 	}
 }
