@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.github.kennyalmendral.assistrip" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.github.kennyalmendral.assistrip" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Assistrip</name>
     <description>A free and simple utility app designed to assist you in your trips.</description>
     <author email="kennyalmendral@gmail.com" href="https://kennyalmendral.github.io/">Kenny Almendral</author>
